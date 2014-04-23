@@ -7,11 +7,13 @@
 
     <title><%= content_for?(:title) ? yield(:title) : "Web Development for Nonprofits" %></title>
     
+    <%= stylesheet_link_tag "http://yui.yahooapis.com/pure/0.3.0/menus-min.css" %>
     <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
   </head>
   <body>
-    <main role="main">
+    <main role="main" class="layout" id="layout">
        <%= render 'layouts/messages' %>
+       <%= render 'layouts/menu' %>
        <%= yield %>
     </main>
 

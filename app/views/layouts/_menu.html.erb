@@ -1,0 +1,19 @@
+<a href="#menu" class="menu-link" id="menu-link">
+  <span></span>
+</a>
+<div class="menu" id="menu">
+  <div class="pure-menu pure-menu-open">
+    <%= link_to "Home", root_path, {:class => 'pure-menu-heading'} %>
+    <ul>
+      <li class="<%= 'pure-menu-selected' if current_page?(schedule_path) %>">
+        <%= link_to "Schedule", schedule_path %>
+      </li>
+      <li class="<%= 'pure-menu-selected' if current_page?(assignments_path) %>">
+        <%= link_to "Assignments", assignments_path %>
+      </li>
+      <li class="<%= 'pure-menu-selected' if current_page?(syllabus_path) %>">
+        <%= link_to "Syllabus", syllabus_path %>
+      </li>
+    </ul>
+  </div>
+</div>
