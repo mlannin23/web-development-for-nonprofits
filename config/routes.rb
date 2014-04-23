@@ -8,6 +8,10 @@ Rails.application.routes.draw do
   get 'syllabus', to: 'pages#syllabus'
   get 'admin', to: 'pages#admin'
 
+  namespace :admin do
+    resources :semesters
+  end
+
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 
