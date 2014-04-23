@@ -12,4 +12,7 @@ class PagesController < ApplicationController
   def syllabus
   end
 
+  def admin
+  end
+
 end

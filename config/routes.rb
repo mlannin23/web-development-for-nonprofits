@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get 'schedule', to: 'pages#schedule'
   get 'assignments', to: 'pages#assignments'
   get 'syllabus', to: 'pages#syllabus'
+  get 'admin', to: 'pages#admin'
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
