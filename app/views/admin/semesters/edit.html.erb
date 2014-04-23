@@ -1,0 +1,18 @@
+<div class="breadcrumbs">
+  <div class="container">
+    <ol class="breadcrumb">
+      <li><%= link_to "Admin", admin_path %></li>
+      <li><%= link_to "Semesters", admin_semesters_path %></li>
+      <li><%= link_to "Semester", admin_semester_path(@semester) %></li>
+      <li class="active">Edit</li>
+    </ol>
+  </div>
+</div>
+
+<div class="section">
+  <div class="container">
+    <h2>Edit Semester</h2>
+
+    <%= render 'form' %>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+<div class="breadcrumbs">
+  <div class="container">
+    <ol class="breadcrumb">
+      <li><%= link_to "Admin", admin_path %></li>
+      <li><%= link_to "Semesters", admin_semesters_path %></li>
+      <li class="active">New</li>
+    </ol>
+  </div>
+</div>
+
+<div class="section">
+  <div class="container">
+    <h2>New Semester</h2>
+
+    <%= render 'form' %>
+  </div>
+</div>
