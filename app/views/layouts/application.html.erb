@@ -12,11 +12,13 @@
   </head>
   <body>
     <main role="main" class="main" id="main">
-       <%= render 'layouts/messages' %>
-       <%= render 'layouts/menu' %>
-       <%= yield %>
+      <%= render 'layouts/messages' %>
+      <%= render 'layouts/menu' %>
+      
+      <%= yield %>
     </main>
 
+    <%= render 'layouts/footer' %>
     <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   </body>
 </html>

@@ -1,4 +1,4 @@
-var layout   = document.getElementById('layout'),
+var main     = document.getElementById('main'),
     menu     = document.getElementById('menu'),
     menuLink = document.getElementById('menu-link');
 
@@ -25,7 +25,7 @@ menuLink.onclick = function (e) {
     var active = 'active';
 
     e.preventDefault();
-    toggleClass(layout, active);
+    toggleClass(main, active);
     toggleClass(menu, active);
     toggleClass(menuLink, active);
 };
