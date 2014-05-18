@@ -39,7 +39,7 @@
       background: #64a8d1;
     }
     a {
-      color: #bbb;
+      color: #ccc;
       border: none;
       white-space: normal;
       padding: 10px 0 10px 10px;
@@ -52,6 +52,7 @@
       li {
         a:hover, a:focus {
           background: #64a8d1;
+          color: #fff;
         }
       }
       .pure-menu-selected {
@@ -64,9 +65,6 @@
           background: none;
         }
       }
-    }
-    ul, .menu-item-divided {
-      border-top: 1px solid #0e53a7;
     }
   }
 
