@@ -10,17 +10,17 @@ body{
 }
 .main {
   min-height: 100%;
-  margin-bottom: -65px; 
+  margin-bottom: -70px; 
 }
 .main:after {
   content: "";
   display: block;
 }
 .footer, .main:after {
-  height: 65px; 
+  height: 70px; 
 }
 .footer {
-  height: 65px;
+  height: 70px;
   padding-top: 25px;
   color: #777;
   text-align: center;
