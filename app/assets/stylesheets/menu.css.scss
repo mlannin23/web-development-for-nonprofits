@@ -44,6 +44,10 @@
       white-space: normal;
       padding: 10px 0 10px 10px;
       text-decoration: none;
+      -webkit-transition: all 0.2s ease-in-out;
+      -moz-transition: all 0.2s ease-in-out;
+      -ms-transition: all 0.2s ease-in-out;
+      -o-transition: all 0.2s ease-in-out;
     }
     ul {
       border: none;
