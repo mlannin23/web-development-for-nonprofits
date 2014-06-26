@@ -1,3 +1,19 @@
 // Place all the styles related to the pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+/*
+ * Admin
+ *
+ * Dashboard for creating/editing course content
+ */
+
+.admin {
+  padding-bottom: 80px;
+  .page-header {
+    margin-top: 20px;
+  }
+  .view {
+    padding-left: 10px;
+  }
+}

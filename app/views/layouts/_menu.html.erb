@@ -3,7 +3,7 @@
 </a>
 <div class="menu" id="menu">
   <div class="pure-menu pure-menu-open">
-    <%= link_to "Home", root_path, {:class => 'pure-menu-heading'} %>
+    <%= link_to "Home", root_path, class: "pure-menu-heading" %>
     <ul>
       <li class="<%= 'pure-menu-selected' if current_page?(schedule_path) %>">
         <%= link_to "Schedule", schedule_path %>
