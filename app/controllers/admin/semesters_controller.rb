@@ -29,7 +29,7 @@ class Admin::SemestersController < ApplicationController
   def update
     @semester = Semester.find(params[:id])
 
-    if @semester.update(params[:semester].permit(:season, :year))
+    if @semester.update(semester_params)
       redirect_to admin_semesters_path
     else
       render 'edit'
