@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   namespace :admin do
     resources :semesters
     resources :lessons
+    resources :assignments
   end
 
   # You can have the root of your site routed with "root"
