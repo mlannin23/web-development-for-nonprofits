@@ -42,7 +42,17 @@
           <%= render 'admin/presentations/form' %>
         </div>
       </div>
-      
+
+      <div class="col-md-4">
+        <div class="well">
+          <h3>Tutorials</h3>
+          <hr>
+          <%= render @lesson.tutorials %>
+
+          <h4>Add tutorials:</h4>
+          <%= render 'admin/tutorials/form' %>
+        </div>
+      </div>
     </div>
   </div>
 </div>

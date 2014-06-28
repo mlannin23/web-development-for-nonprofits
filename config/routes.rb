@@ -13,6 +13,7 @@ Rails.application.routes.draw do
     resources :semesters, :assignments
     resources :lessons do
       resources :presentations
+      resources :tutorials
     end
   end
 
