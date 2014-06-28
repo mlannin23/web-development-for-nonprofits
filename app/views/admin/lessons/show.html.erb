@@ -10,23 +10,39 @@
 
 <div class="section">
   <div class="container-fluid">
-    <h2>Lesson Details</h2>
-    
-    <p>
-      <strong>Week:</strong>
-      <%= @lesson.week %>
-    </p>
-     
-    <p>
-      <strong>Date:</strong>
-      <%= @lesson.date.strftime("%b %e") %>
-    </p>
+    <div class="row">
+      <div class="col-md-4">
+        <h2>Lesson Details</h2>
+        
+        <p>
+          <strong>Week:</strong>
+          <%= @lesson.week %>
+        </p>
+         
+        <p>
+          <strong>Date:</strong>
+          <%= @lesson.date.strftime("%b %e") %>
+        </p>
 
-    <p>
-      <strong>Topic:</strong>
-      <%= @lesson.topic %>
-    </p>
+        <p>
+          <strong>Topic:</strong>
+          <%= @lesson.topic %>
+        </p>
 
-    <%= link_to 'Edit', edit_admin_lesson_path(@lesson), { class: "btn btn-default" } %>
+        <%= link_to 'Edit', edit_admin_lesson_path(@lesson), { class: "btn btn-default" } %>
+      </div>
+
+      <div class="col-md-4">
+        <div class="well">
+          <h3>Presentations</h3>
+          <hr>
+          <%= render @lesson.presentations %>
+
+          <h4>Add presentation:</h4>
+          <%= render 'admin/presentations/form' %>
+        </div>
+      </div>
+      
+    </div>
   </div>
 </div>

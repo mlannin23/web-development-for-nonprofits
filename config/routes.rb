@@ -10,9 +10,10 @@ Rails.application.routes.draw do
   get 'admin', to: 'pages#admin'
 
   namespace :admin do
-    resources :semesters
-    resources :lessons
-    resources :assignments
+    resources :semesters, :assignments
+    resources :lessons do
+      resources :presentations
+    end
   end
 
   # You can have the root of your site routed with "root"
