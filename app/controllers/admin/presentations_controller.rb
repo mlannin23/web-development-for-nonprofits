@@ -1,5 +1,7 @@
 class Admin::PresentationsController < ApplicationController
 
+  before_action :authenticate_admin!
+
   def create
     @lesson = Lesson.find(params[:lesson_id])
     @presentation = @lesson.presentations.create(presentation_params)

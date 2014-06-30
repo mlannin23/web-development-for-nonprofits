@@ -1,5 +1,7 @@
 class Admin::AssignmentsController < ApplicationController
 
+  before_action :authenticate_admin!
+
   def index
     @assignments = Assignment.all
   end
