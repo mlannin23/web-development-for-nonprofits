@@ -22,13 +22,18 @@ body{
 .footer {
   height: 70px;
   padding-top: 25px;
+  padding-left: 150px;
   color: #777;
   text-align: center;
   border-top: 1px solid #e5e5e5;
 }
 
-@media (min-width: 870px) {
+@media (max-width: 870px) {
   .footer {
-    padding-left: 150px;
+    padding-left: 0;
+  }
+  .footer.active {
+    position: relative;
+    left: 150px;
   }
 }

@@ -1,6 +1,7 @@
-var main     = document.getElementById('main'),
-    menu     = document.getElementById('menu'),
-    menuLink = document.getElementById('menu-link');
+var main = document.getElementById('main'),
+    menu = document.getElementById('menu'),
+    menuLink = document.getElementById('menu-link'),
+    footer = document.getElementById('footer');
 
 function toggleClass(element, className) {
     var classes = element.className.split(/\s+/),
@@ -8,10 +9,10 @@ function toggleClass(element, className) {
         i = 0;
 
     for(; i < length; i++) {
-      if (classes[i] === className) {
-        classes.splice(i, 1);
-        break;
-      }
+        if (classes[i] === className) {
+            classes.splice(i, 1);
+            break;
+        }
     }
     // The className is not found
     if (length === classes.length) {
@@ -28,4 +29,5 @@ menuLink.onclick = function (e) {
     toggleClass(main, active);
     toggleClass(menu, active);
     toggleClass(menuLink, active);
+    toggleClass(footer, active);
 };
