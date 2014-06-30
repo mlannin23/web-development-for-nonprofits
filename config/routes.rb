@@ -17,6 +17,8 @@ Rails.application.routes.draw do
     end
   end
 
+  get 'approve/:id', to: 'application#approve', as: 'approve'
+
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 
