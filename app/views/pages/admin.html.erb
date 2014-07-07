@@ -27,7 +27,7 @@
       <% @users.each do |user| %>
         <tr>
           <td><%= user.email %></td>
-          <td><%= user.approved ? "Approved" : link_to("Approve", approve_path(user), class: "btn btn-default btn-sm") %></td>
+          <td><%= user.approved ? link_to("Approved", approve_path(user), class: "btn btn-default btn-sm disabled") : link_to("Approve", approve_path(user), class: "btn btn-default btn-sm") %></td>
         </tr>
       <% end %>
     </table>
