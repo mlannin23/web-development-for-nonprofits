@@ -21,7 +21,7 @@ a, a:hover {
   -moz-transition: all 0.2s ease-in-out;
   -ms-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
-  border-radius: 0;
+  border-radius: 3px;
 }
 
 /* Wells */
@@ -45,4 +45,9 @@ a, a:hover {
 /* Breadcrumbs */
 .breadcrumb {
   border: 1px solid #e3e3e3;
+}
+
+/* Forms */
+.form-control {
+  border-radius: 3px;
 }
