@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140707231236) do
+ActiveRecord::Schema.define(version: 20140813022831) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,23 +19,17 @@ ActiveRecord::Schema.define(version: 20140707231236) do
   create_table "assignments", force: true do |t|
     t.string   "title"
     t.string   "url"
-    t.integer  "semester_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
-
-  add_index "assignments", ["semester_id"], name: "index_assignments_on_semester_id", using: :btree
 
   create_table "lessons", force: true do |t|
     t.integer  "week"
     t.date     "date"
     t.string   "topic"
-    t.integer  "semester_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
-
-  add_index "lessons", ["semester_id"], name: "index_lessons_on_semester_id", using: :btree
 
   create_table "presentations", force: true do |t|
     t.string   "title"
@@ -46,13 +40,6 @@ ActiveRecord::Schema.define(version: 20140707231236) do
   end
 
   add_index "presentations", ["lesson_id"], name: "index_presentations_on_lesson_id", using: :btree
-
-  create_table "semesters", force: true do |t|
-    t.string   "season"
-    t.integer  "year"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
 
   create_table "tutorials", force: true do |t|
     t.string   "title"
