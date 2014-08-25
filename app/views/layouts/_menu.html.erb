@@ -3,7 +3,7 @@
 </a>
 <div class="menu" id="menu">
   <div class="pure-menu pure-menu-open">
-    <%= link_to "Home", root_path, class: "pure-menu-heading" %>
+    <%= link_to "Web Development for Nonprofits", root_path, class: "pure-menu-heading" %>
     <ul>
       <li class="<%= 'pure-menu-selected' if current_page?(schedule_path) %>">
         <%= link_to "Schedule", schedule_path %>
@@ -16,7 +16,7 @@
       </li>
       <% if user_signed_in? %>
         <% if current_user.admin? %>
-          <li class="<%= 'pure-menu-selected' if current_page?(admin_path) %>">
+          <li class="menu-item-divided <%= 'pure-menu-selected' if current_page?(admin_path) %>">
             <%= link_to "Admin", admin_path %>
           </li>
         <% end %>

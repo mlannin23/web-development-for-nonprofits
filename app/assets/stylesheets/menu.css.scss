@@ -17,10 +17,10 @@
   left: 150px;
   bottom: 0;
   z-index: 1000;
-  background: #0969a3;
+  background-color: #2f506c;
   overflow-y: auto;
   -webkit-overflow-scroll: touch;
-  border-color: #03436a;
+  font-family: 'open sans', arial, sans-serif;
   .pure-menu-open {
     background: transparent;
     border: 0;
@@ -30,14 +30,16 @@
       max-width: 100%;
     }
     .pure-menu-heading {
-      font-size: 18px;
+      font-size: 16px;
       color: #fff;
       padding: 10px;
       margin-top: 20px;
+      text-transform: none;
+      text-align: center;
     }
     .pure-menu-heading:hover,
     .pure-menu-heading:focus {
-      background: #64a8d1;
+      background: #6091ba;
     }
     a {
       color: #ccc;
@@ -56,12 +58,12 @@
       font-size: 15px;
       li {
         a:hover, a:focus {
-          background: #64a8d1;
+          background: #6091ba;
           color: #fff;
         }
       }
       .menu-item-divided {
-        border-top: 1px solid #888;
+        border-top: 1px solid #27435a;
       }
       .pure-menu-selected {
         background: #ff8c00;
