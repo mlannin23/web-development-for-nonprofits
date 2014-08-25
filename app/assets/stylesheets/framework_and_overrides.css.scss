@@ -3,11 +3,11 @@
 
 /* Typography */
 body {
+  font-family: 'open sans', arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'open sans', arial, sans-serif;
   font-weight: 300;
 }
 a, a:hover {
@@ -22,6 +22,31 @@ a, a:hover {
   -ms-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
   border-radius: 3px;
+}
+.btn-outline {
+  color: #2f506c;
+  background-color: transparent;
+  border-color: #2f506c;
+}
+.btn-outline:hover,
+.btn-outline:focus,
+.btn-outline:active {
+  color: #fff;
+  background-color: #2f506c;
+  border-color: #2f506c;
+}
+.btn-outline-inverse {
+  color: #fff;
+  background-color: transparent;
+  border-color: #fff;
+}
+.btn-outline-inverse:hover,
+.btn-outline-inverse:focus,
+.btn-outline-inverse:active {
+  color: #2f506c;
+  text-shadow: none;
+  background-color: #fff;
+  border-color: #fff;
 }
 
 /* Wells */

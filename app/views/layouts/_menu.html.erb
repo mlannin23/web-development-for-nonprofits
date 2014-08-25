@@ -5,7 +5,7 @@
   <div class="pure-menu pure-menu-open">
     <%= link_to "Web Development for Nonprofits", root_path, class: "pure-menu-heading" %>
     <ul>
-      <li class="<%= 'pure-menu-selected' if current_page?(schedule_path) %>">
+      <li class="menu-item-divided <%= 'pure-menu-selected' if current_page?(schedule_path) %>">
         <%= link_to "Schedule", schedule_path %>
       </li>
       <li class="<%= 'pure-menu-selected' if current_page?(assignments_path) %>">
