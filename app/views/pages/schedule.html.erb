@@ -1,0 +1,35 @@
+<div class="schedule">
+  <div class="container-fluid">
+    <h1>Schedule</h1>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Week</th>
+          <th>Date</th>
+          <th>Topic</th>
+          <th>Slides</th>
+          <th>Tutorials</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @lessons.each do |lesson| %>
+          <tr>
+            <td><%= lesson.week %></td>
+            <td><%= lesson.date.strftime("%b %e") %></td>
+            <td><%= lesson.topic %></td>
+            <td>
+              <% lesson.presentations.each do |presentation| %>
+                <%= link_to presentation.title, presentation.url, target: "_blank" %>
+              <% end %>
+            </td>
+            <td>
+              <% lesson.tutorials.each do |tutorial| %>
+                <%= link_to tutorial.title, tutorial.url, target: "_blank" %>
+              <% end %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>

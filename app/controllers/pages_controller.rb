@@ -6,6 +6,7 @@ class PagesController < ApplicationController
   end
 
   def schedule
+    @lessons = Lesson.order(:week)
   end
 
   def assignments
