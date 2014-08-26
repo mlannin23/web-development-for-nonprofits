@@ -85,6 +85,29 @@
 }
 
 /*
+ * Assignments
+ *
+ * List of all assignments
+ */
+
+.assignments {
+  padding: 20px 0;
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .btn {
+    margin-top: -8px;
+    margin-bottom: -8px;
+  }
+}
+@media (min-width: 768px) {
+  .assignments {
+    padding: 40px 0;
+  }
+}
+
+/*
  * Admin
  *
  * Dashboard for creating/editing course content

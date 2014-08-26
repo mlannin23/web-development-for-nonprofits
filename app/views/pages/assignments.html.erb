@@ -1,0 +1,21 @@
+<div class="assignments">
+  <div class="container-fluid">
+    <h1>Assignments</h1>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Assignment</th>
+          <th>Submission</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @assignments.each do |assignment| %>
+          <tr>
+            <td><%= link_to assignment.title, assignment.url, target: "_blank" %></td>
+            <td><%= link_to "Submit Assignment", "#", class: "btn btn-outline" %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>

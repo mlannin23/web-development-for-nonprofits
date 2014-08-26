@@ -10,6 +10,7 @@ class PagesController < ApplicationController
   end
 
   def assignments
+    @assignments = Assignment.order(:title)
   end
 
   def syllabus
