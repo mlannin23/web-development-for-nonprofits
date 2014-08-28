@@ -12,7 +12,11 @@
         <% @assignments.each do |assignment| %>
           <tr>
             <td><%= link_to assignment.title, assignment.url, target: "_blank" %></td>
-            <td><%= link_to "Submit Assignment", "#", class: "btn btn-outline" %></td>
+            <td>
+              <div class="btn-submit" data-toggle="tooltip" data-placement="left" title="<%= 'You must be signed in to submit assignments' unless user_signed_in? %>">
+                <%= link_to "Submit Assignment", "#", class: "btn btn-outline btn-xs #{ 'disabled' unless user_signed_in? }" %>
+              </div>
+            </td>
           </tr>
         <% end %>
       </tbody>
