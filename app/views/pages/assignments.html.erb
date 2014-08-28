@@ -1,25 +1,29 @@
 <div class="assignments">
   <div class="container-fluid">
     <h1>Assignments</h1>
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Assignment</th>
-          <th>Submission</th>
-        </tr>
-      </thead>
-      <tbody>
-        <% @assignments.each do |assignment| %>
+    <% if @assignments.length == 0 %>
+      <p class="lead">There are currently no assignments posted.</p>
+    <% else %>
+      <table class="table">
+        <thead>
           <tr>
-            <td><%= link_to assignment.title, assignment.url, target: "_blank" %></td>
-            <td>
-              <div class="btn-submit" data-toggle="tooltip" data-placement="left" title="<%= 'You must be signed in to submit assignments' unless user_signed_in? %>">
-                <%= link_to "Submit Assignment", "#", class: "btn btn-outline btn-xs #{ 'disabled' unless user_signed_in? }" %>
-              </div>
-            </td>
+            <th>Assignment</th>
+            <th>Submission</th>
           </tr>
-        <% end %>
-      </tbody>
-    </table>
+        </thead>
+        <tbody>
+          <% @assignments.each do |assignment| %>
+            <tr>
+              <td><%= link_to assignment.title, assignment.url, target: "_blank" %></td>
+              <td>
+                <div class="btn-submit" data-toggle="tooltip" data-placement="left" title="<%= 'You must be signed in to submit assignments' unless user_signed_in? %>">
+                  <%= link_to "Submit Assignment", "#", class: "btn btn-outline btn-xs #{ 'disabled' unless user_signed_in? }" %>
+                </div>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    <% end %>
   </div>
 </div>
