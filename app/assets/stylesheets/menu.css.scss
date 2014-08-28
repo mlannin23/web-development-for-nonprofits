@@ -26,9 +26,6 @@
     border: 0;
   }
   .pure-menu {
-    img {
-      max-width: 100%;
-    }
     .pure-menu-heading {
       font-size: 15px;
       color: #fff;
@@ -77,7 +74,10 @@
       }
     }
   }
-
+  .btn {
+    display: block;
+    margin: 20px;
+  }
 }
 
 .menu-link {
