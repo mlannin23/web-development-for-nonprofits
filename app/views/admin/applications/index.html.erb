@@ -1,0 +1,30 @@
+<div class="breadcrumbs">
+  <div class="container-fluid">
+    <ol class="breadcrumb">
+      <li><%= link_to "Admin", admin_path %></li>
+      <li class="active">Applications</li>
+    </ol>
+  </div>
+</div>
+
+<div class="section">
+  <div class="container-fluid">
+    <h2>Applications</h2>
+
+    <table class="table">
+      <tr>
+        <th>Name</th>
+        <th>Actions</th>
+      </tr>
+     
+      <% @applications.each do |application| %>
+        <tr>
+          <td><%= application.first_name + " " + application.last_name %></td>
+          <td><%= link_to 'Show', admin_application_path(application) %> | 
+              <%= link_to 'Edit', edit_admin_application_path(application) %> | 
+              <%= link_to 'Destroy', admin_application_path(application), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </table>
+  </div>
+</div>

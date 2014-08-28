@@ -1,0 +1,18 @@
+<div class="breadcrumbs">
+  <div class="container-fluid">
+    <ol class="breadcrumb">
+      <li><%= link_to "Admin", admin_path %></li>
+      <li><%= link_to "Applications", admin_applications_path %></li>
+      <li><%= link_to "Application", admin_application_path(@application) %></li>
+      <li class="active">Edit</li>
+    </ol>
+  </div>
+</div>
+
+<div class="section">
+  <div class="container-fluid">
+    <h2>Edit Application</h2>
+
+    <%= render 'form' %>
+  </div>
+</div>

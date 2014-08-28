@@ -9,8 +9,10 @@ Rails.application.routes.draw do
   get 'syllabus', to: 'pages#syllabus'
   get 'admin', to: 'pages#admin'
 
+  get 'apply', to: 'admin/applications#new'
+
   namespace :admin do
-    resources :semesters, :assignments
+    resources :semesters, :assignments, :applications
     resources :lessons do
       resources :presentations
       resources :tutorials

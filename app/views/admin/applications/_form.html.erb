@@ -1,0 +1,83 @@
+<%= form_for [:admin, @application] do |f| %>
+  
+  <% if @application.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@application.errors.count, "error") %> prohibited this application from being saved:</h2>
+      <ul>
+        <% @application.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="row">
+    <div class="col-sm-6 form-group">
+      <%= f.label :first_name, "First Name" %><br>
+      <%= f.text_field :first_name, :class => "form-control" %>
+    </div>
+    
+    <div class="col-sm-6 form-group">
+      <%= f.label :last_name, "Last Name" %><br>
+      <%= f.text_field :last_name, :class => "form-control" %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-6 form-group">
+      <%= f.label :email %><br>
+      <%= f.text_field :email, :class => "form-control" %>
+    </div>
+
+    <div class="col-sm-6 form-group">
+      <%= f.label :phone_number, "Phone Number" %><br>
+      <%= f.text_field :phone_number, :class => "form-control" %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-4 form-group">
+      <%= f.label :year %><br>
+      <%= f.select :year, ['Freshman', 'Sophomore', 'Junior', 'Senior'], { :include_blank => false }, { :class => "form-control" } %>
+    </div>
+
+    <div class="col-sm-8 form-group">
+      <%= f.label :major, "Major(s)" %><br>
+      <%= f.text_field :major, :class => "form-control" %>
+    </div>
+  </div>  
+
+  <div class="row form-group">
+    <div class="col-sm-12">
+      <%= f.label :year, "Have you fulfilled the suggested prerequisite of CS 61A?" %>
+    </div>
+    <div class="col-sm-3">
+      <%= f.select :year, ['Yes', 'No'], { :include_blank => false }, { :class => "form-control" } %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :about, "Please tell us a little bit about yourself." %><br>
+    <%= f.text_area :about, :class => "form-control", :rows => 4 %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :why, "Why do you want to take the Web Development for Nonprofits DeCal?" %><br>
+    <%= f.text_area :why, :class => "form-control", :rows => 4 %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :experience, "Please summarize any web development experience you have." %><br>
+    <%= f.text_area :experience, :class => "form-control", :rows => 4 %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :anything, "Is there anything else you'd like to tell us?" %><br>
+    <%= f.text_area :anything, :class => "form-control", :rows => 4 %>
+  </div>
+
+  <div class="form-group">
+    <%= f.submit "Submit Application", class: "btn btn-outline btn-lg center-block" %>
+  </div>
+  
+<% end %>

@@ -1,0 +1,67 @@
+<div class="breadcrumbs">
+  <div class="container-fluid">
+    <ol class="breadcrumb">
+      <li><%= link_to "Admin", admin_path %></li>
+      <li><%= link_to "Applications", admin_applications_path %></li>
+      <li class="active">Application</li>
+    </ol>
+  </div>
+</div>
+
+<div class="section">
+  <div class="container-fluid">
+    <h2>Application Details</h2>
+
+    <p>
+      <strong>Name:</strong>
+      <%= @application.first_name + @application.last_name %>
+    </p>
+     
+    <p>
+      <strong>Email:</strong>
+      <%= @application.email %>
+    </p>
+
+    <p>
+      <strong>Phone Number:</strong>
+      <%= @application.phone_number %>
+    </p>
+
+    <p>
+      <strong>Year:</strong>
+      <%= @application.year %>
+    </p>
+
+    <p>
+      <strong>Major(s):</strong>
+      <%= @application.major %>
+    </p>
+
+    <p>
+      <strong>Prequisite Satisfied?</strong>
+      <%= @application.prerequisite.capitalize %>
+    </p>
+
+    <p>
+      <strong>Please tell us a little bit about yourself.</strong><br>
+      <%= @application.about %>
+    </p>
+
+    <p>
+      <strong>Why do you want to take the Web Development for Nonprofits DeCal?</strong><br>
+      <%= @application.why %>
+    </p>
+
+    <p>
+      <strong>Please summarize any web development experience you have.</strong><br>
+      <%= @application.experience %>
+    </p>
+
+    <p>
+      <strong>Is there anything else you'd like to tell us?</strong><br>
+      <%= @application.anything %>
+    </p>
+
+    <%= link_to 'Edit', edit_admin_application_path(@application), { class: "btn btn-default" } %>
+  </div>
+</div>
