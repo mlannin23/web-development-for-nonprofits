@@ -52,6 +52,3 @@ gem 'rails_12factor', group: :production
 
 # Ruby version
 ruby '2.1.0'
-
-# Use Heroku Secrets gem to store secrets
-gem 'heroku_secrets', github: 'alexpeattie/heroku_secrets'
