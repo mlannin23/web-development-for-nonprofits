@@ -15,5 +15,5 @@
 /log/*.log
 /tmp
 
-# Ignore secrets
-/config/secrets.yml
+# Ignore environment variables
+/config/initializers/environment_variables.rb
