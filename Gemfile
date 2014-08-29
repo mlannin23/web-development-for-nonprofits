@@ -52,3 +52,6 @@ gem 'rails_12factor', group: :production
 
 # Ruby version
 ruby '2.1.0'
+
+# Use Figaro for configuration
+gem 'figaro'

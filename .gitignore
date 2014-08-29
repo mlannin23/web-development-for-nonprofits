@@ -15,5 +15,5 @@
 /log/*.log
 /tmp
 
-# Ignore environment variables
-/config/initializers/environment_variables.rb
+# Ignore application configuration
+/config/application.yml
