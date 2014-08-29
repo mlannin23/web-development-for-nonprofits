@@ -38,8 +38,11 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+# Use the Bootstrap framework
 gem 'bootstrap-sass'
 group :development do
   gem 'rails_layout'
 end
+
+# Use Devise for authentication
 gem 'devise'
