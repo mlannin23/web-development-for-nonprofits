@@ -46,3 +46,10 @@ end
 
 # Use Devise for authentication
 gem 'devise'
+
+# Heroku gem
+gem 'rails_12factor', group: :production
+
+# Ruby version
+ruby '2.1.0'
+
