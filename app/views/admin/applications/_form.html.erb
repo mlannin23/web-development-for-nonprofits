@@ -49,10 +49,10 @@
 
   <div class="row form-group">
     <div class="col-sm-12">
-      <%= f.label :year, "Have you fulfilled the suggested prerequisite of CS 61A?" %>
+      <%= f.label :prerequisite, "Have you fulfilled the suggested prerequisite of CS 61A?" %>
     </div>
     <div class="col-sm-3">
-      <%= f.select :year, ['Yes', 'No'], { :include_blank => false }, { :class => "form-control" } %>
+      <%= f.select :prerequisite, ['Yes', 'No'], { :include_blank => false }, { :class => "form-control" } %>
     </div>
   </div>
 
