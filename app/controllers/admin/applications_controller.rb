@@ -18,7 +18,15 @@ class Admin::ApplicationsController < ApplicationController
   end
 
   def new
-    @application = Application.new
+    deadline = Time.new(2014, 9, 7, 12, 0, 0)
+    now = Time.now
+
+    if deadline > now
+      @application = Application.new
+    else
+      flash[:notice] = "Applications have now closed. Please check back next semester!"
+      redirect_to root_path
+    end
   end
 
   def edit
