@@ -12,7 +12,10 @@ Rails.application.routes.draw do
   get 'apply', to: 'admin/applications#new'
 
   namespace :admin do
-    resources :semesters, :assignments, :applications
+    resources :semesters, :applications
+    resources :assignments do
+      resources :submissions
+    end
     resources :lessons do
       resources :presentations
       resources :tutorials
