@@ -10,6 +10,7 @@ class Admin::SubmissionsController < ApplicationController
   def create
     @assignment = Assignment.find(params[:assignment_id])
     @submission = @assignment.submissions.create(submission_params)
+    @submission.user = current_user
 
     if @submission.save
       flash[:success] = "You have successfully submitted your assignment!"

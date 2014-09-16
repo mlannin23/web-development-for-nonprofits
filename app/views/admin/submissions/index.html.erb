@@ -15,11 +15,13 @@
 
     <table class="table">
       <tr>
+        <th>User</th>
         <th>Title</th>
       </tr>
      
       <% @submissions.each do |submission| %>
         <tr>
+          <td><%= submission.user.email %></td>
           <td><%= submission.title %></td>
         </tr>
       <% end %>
