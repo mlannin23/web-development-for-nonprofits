@@ -27,7 +27,7 @@ class Admin::SubmissionsController < ApplicationController
 
   private
     def submission_params
-      params.require(:submission).permit(:title)
+      params.require(:submission).permit(:file)
     end
 
 end

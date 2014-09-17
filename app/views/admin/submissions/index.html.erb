@@ -16,13 +16,13 @@
     <table class="table">
       <tr>
         <th>User</th>
-        <th>Title</th>
+        <th>File</th>
       </tr>
      
       <% @submissions.each do |submission| %>
         <tr>
           <td><%= submission.user.email %></td>
-          <td><%= submission.title %></td>
+          <td><%= submission.file.url %></td>
         </tr>
       <% end %>
     </table>
