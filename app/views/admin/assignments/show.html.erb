@@ -23,6 +23,11 @@
     </p>
 
     <p>
+      <strong>File:</strong>
+      <%= link_to @assignment.file.url, @assignment.file.url, target: "_blank" %>
+    </p>
+
+    <p>
       <%= link_to "View submissions", admin_assignment_submissions_path(@assignment) %>
     </p>
 

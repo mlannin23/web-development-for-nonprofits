@@ -16,7 +16,8 @@
             <tr>
               <td><%= link_to assignment.title, assignment.url, target: "_blank" %></td>
               <td>
-                <div class="btn-submit" data-toggle="tooltip" data-placement="left" title="<%= 'You must be signed in to submit assignments' unless user_signed_in? %>">
+                <%= link_to "Download Files", assignment.file.url, class: "btn btn-outline btn-xs btn-table" %>
+                <div class="btn-table" data-toggle="tooltip" data-placement="left" title="<%= 'You must be signed in to submit assignments' unless user_signed_in? %>">
                   <%= link_to "Submit Assignment", new_admin_assignment_submission_path(assignment), class: "btn btn-outline btn-xs #{ 'disabled' unless user_signed_in? }" %>
                 </div>
               </td>

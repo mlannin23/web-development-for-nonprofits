@@ -47,7 +47,7 @@ class Admin::AssignmentsController < ApplicationController
 
   private
     def assignment_params
-      params.require(:assignment).permit(:title, :url)
+      params.require(:assignment).permit(:title, :url, :file)
     end
 
 end
