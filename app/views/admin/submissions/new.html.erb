@@ -1,29 +1,35 @@
-<div class="section">
+<div class="submission">
   <div class="container-fluid">
-    <h2>New Submission for <%= @assignment.title %></h2>
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">  
+        <h2 class="text-center">Submission for <%= @assignment.title %></h2>
 
-    <%= form_for([:admin, @assignment, @submission]) do |f| %>
-      
-      <% if @submission.errors.any? %>
-        <div id="error_explanation">
-          <h2><%= pluralize(@submission.errors.count, "error") %> prohibited this submission from being saved:</h2>
-          <ul>
-            <% @submission.errors.full_messages.each do |msg| %>
-              <li><%= msg %></li>
-            <% end %>
-          </ul>
-        </div>
-      <% end %>
+        <p class="explanation">In order to submit your assignment, please compress the folder in which your files are stored into a zip file. In OS X, this is done by right-clicking the folder and selecting 'Compress "..."'. In Windows, this is done by right-clicking the folder, pointing to 'Send to', and then selecting 'Compressed (zipped) folder'.</p>
 
-      <p>
-        <%= f.label :file %><br>
-        <%= f.file_field :file %>
-      </p>
-     
-      <p>
-        <%= f.submit :class => "btn btn-default" %>
-      </p>
-      
-    <% end %>
+        <%= form_for([:admin, @assignment, @submission]) do |f| %>
+          
+          <% if @submission.errors.any? %>
+            <div id="error_explanation">
+              <h2><%= pluralize(@submission.errors.count, "error") %> prohibited this assignment from being submitted:</h2>
+              <ul>
+                <% @submission.errors.full_messages.each do |msg| %>
+                  <li><%= msg %></li>
+                <% end %>
+              </ul>
+            </div>
+          <% end %>
+
+          <p class="file">
+            <%= f.label :file %><br>
+            <%= f.file_field :file %>
+          </p>
+         
+          <p>
+            <%= f.submit "Submit Assignment", :class => "btn btn-default" %>
+          </p>
+          
+        <% end %>
+      </div>
+    </div>
   </div>
 </div>
