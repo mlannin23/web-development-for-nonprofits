@@ -4,7 +4,7 @@ class Submission < ActiveRecord::Base
 
   validates :file, presence: true
 
-  has_attached_file :file, :path => "/submissions/:filename"
+  has_attached_file :file, :path => "/submissions/:id/:filename"
 
   validates_attachment_content_type :file, :content_type => [ 'application/zip' ]
 end
